@@ -1,0 +1,6 @@
+/.idea
+/.idea_modules
+/test
+out
+*.cmd.jar
+*.cmd.com
