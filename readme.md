@@ -24,7 +24,7 @@ truth tables.
    sireum proyek assemble --jar logika-upgrader --uber --main Upgrader logika-upgrader
    ```
 
-2. Run the batch file:
+2. Run the batch file (assuming Java is in the PATH env var):
 
    * On **macOS/Linux**:
 
@@ -48,6 +48,21 @@ truth tables.
    If the `<output>` file is specified, then the '.logika'/'.sc' file extension for truth table/other.
    The last `auto` option should used for programming logic Auto or SymExe Logika v3 mode (by default
    the upgrader detects auto mode by determining whether `auto` or `symexe` is in the (lower-cased) `<input>` path. 
+
+   If Java is not in the PATH env var, you can run it as follows:
+
+   * On **macOS/Linux**:
+
+     ```sh
+     $JAVA_HOME/bin/java -jar out/logika-upgrader/assemble/logika-upgrader.jar.bat
+     ```
+
+   * On **Windows**:
+
+     ```cmd
+     %JAVA_HOME%\bin\java.exe -jar out\logika-upgrader\assemble\logika-upgrader.jar.bat
+     ```
+   
 
 ## Test
 

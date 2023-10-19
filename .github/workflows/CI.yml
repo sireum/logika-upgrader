@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
-      - name: Verify
+      - name: Test
         run: |
           (DIR=kekinian && SIREUM_V=master && export SIREUM_NO_SETUP=true && rm -fR $DIR && mkdir -p $DIR/bin && cd $DIR/bin && curl -JLso init.sh https://raw.githubusercontent.com/sireum/kekinian/$SIREUM_V/bin/init.sh && bash init.sh)
           SIREUM_HOME=`pwd`/kekinian bin/test.cmd 
