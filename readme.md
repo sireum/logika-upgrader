@@ -29,13 +29,13 @@ truth tables.
    * On **macOS/Linux**:
 
      ```sh
-     out/logika-upgrader/assemble/logika-upgrader.jar.bat
+     logika-upgrader/out/logika-upgrader/assemble/logika-upgrader.jar.bat
      ```
 
    * On **Windows**:
 
      ```cmd
-     out\logika-upgrader\assemble\logika-upgrader.jar.bat
+     logika-upgrader\out\logika-upgrader\assemble\logika-upgrader.jar.bat
      ```
      
    which will display its usage information:
@@ -54,13 +54,13 @@ truth tables.
    * On **macOS/Linux**:
 
      ```sh
-     $JAVA_HOME/bin/java -jar out/logika-upgrader/assemble/logika-upgrader.jar.bat
+     $JAVA_HOME/bin/java -jar logika-upgrader/out/logika-upgrader/assemble/logika-upgrader.jar.bat
      ```
 
    * On **Windows**:
 
      ```cmd
-     %JAVA_HOME%\bin\java.exe -jar out\logika-upgrader\assemble\logika-upgrader.jar.bat
+     %JAVA_HOME%\bin\java.exe -jar logika-upgrader\out\logika-upgrader\assemble\logika-upgrader.jar.bat
      ```
    
 
