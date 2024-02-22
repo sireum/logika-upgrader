@@ -455,7 +455,7 @@ final class Upgrader(isAuto: B, input: Predef.String, implyOp: String, var invCo
         val steps = step.proofStep
         val ss = for (i <- 0 until steps.size) yield translateProofStep(steps.get(i))
         if (step.ID != null && step.ate != null) {
-          st"""${step.sub.getText}  Let { (${step.ID.getText}: ${if (step.`type` == null) st"T" else translateType(step.`type`)}) => SubProof(
+          st"""${step.sub.getText}  SubProof { (${step.ID.getText}: ${if (step.`type` == null) st"T" else translateType(step.`type`)}) => (
               |  ${step.assume.getText}  Assume(${translateFormula(step.formula, None())})${if (ss.nonEmpty) "," else ""}
               |  ${(ss, ",\n")}
               |)}"""
@@ -465,7 +465,7 @@ final class Upgrader(isAuto: B, input: Predef.String, implyOp: String, var invCo
               |  ${(ss, ",\n")}
               |)"""
         } else {
-          st"""${step.sub.getText}  Let { (${step.ID.getText}: ${if (step.`type` == null) st"T" else translateType(step.`type`)}) => SubProof(
+          st"""${step.sub.getText}  SubProof { (${step.ID.getText}: ${if (step.`type` == null) st"T" else translateType(step.`type`)}) => (
               |  ${(ss, ",\n")}
               |)}"""
         }
